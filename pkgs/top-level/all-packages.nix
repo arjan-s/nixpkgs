@@ -7269,6 +7269,8 @@ with pkgs;
 
   fierce = callPackage ../tools/security/fierce { };
 
+  fig = callPackage ../development/tools/fig { };
+
   figlet = callPackage ../tools/misc/figlet { };
 
   file = callPackage ../tools/misc/file {
