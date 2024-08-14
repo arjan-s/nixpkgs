@@ -16,6 +16,7 @@
   requests,
   setuptools-scm,
   xorgserver,
+  stravalib,
 }:
 
 buildPythonPackage rec {
@@ -46,7 +47,7 @@ buildPythonPackage rec {
     qtile
     requests
     xorgserver
-    # stravalib  # marked as broken due to https://github.com/stravalib/stravalib/issues/379
+    stravalib
   ];
 
   disabledTests = [
@@ -72,8 +73,6 @@ buildPythonPackage rec {
     # Needs a running DBUS
     "test/widget/test_iwd.py"
     "test/widget/test_upower.py"
-    # Marked as broken due to https://github.com/stravalib/stravalib/issues/379
-    "test/widget/test_strava.py"
   ];
 
   preCheck = ''
