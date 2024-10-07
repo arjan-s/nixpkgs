@@ -10,20 +10,20 @@
 
 mkYarnPackage rec {
   pname = "mjolnir";
-  version = "1.6.5";
+  version = "1.8.3";
 
   src = fetchFromGitHub {
     owner = "matrix-org";
     repo = "mjolnir";
     rev = "refs/tags/v${version}";
-    hash = "sha256-xejFKz2MmdjMFU0X0SdI+qXTBRAwIvkcfZPQqXB9LV0=";
+    hash = "sha256-yD7QGsS2Em8Z95po9pGRUDmHgHe4z0j0Jnvy3IG7xKY=";
   };
 
   packageJSON = ./package.json;
 
   offlineCache = fetchYarnDeps {
     yarnLock = src + "/yarn.lock";
-    hash = "sha256-RpvdyxJj92k4wFjBBmWCnEpFVOXVWlHEm0SmEBUlnTM=";
+    hash = "sha256-05DqddK8+136Qq/JGeiITZkVJ8Dw9K9HfACKW86989U=";
   };
 
   packageResolutions = {
