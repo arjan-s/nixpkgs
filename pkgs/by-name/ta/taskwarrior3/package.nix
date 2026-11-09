@@ -10,10 +10,12 @@
   rustc,
   cargo,
   installShellFiles,
+  pkg-config,
 
   # buildInputs
   corrosion,
   libuuid,
+  sqlite,
 
   # passthru.tests
   nixosTests,
@@ -83,11 +85,13 @@ stdenv.mkDerivation (finalAttrs: {
     rustc
     cargo
     installShellFiles
+    pkg-config
   ];
 
   buildInputs = [
     corrosion
     libuuid
+    sqlite
   ];
 
   # The test suite is run as an installCheck instead of a check: since
